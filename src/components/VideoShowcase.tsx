@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Film, Zap, TrendingUp, Megaphone } from 'lucide-react';
 import adv1 from '../../Images/videos/ADV1.mp4';
 import adv2 from '../../Images/videos/ADV2.mp4';
@@ -37,6 +38,30 @@ interface VideoCategory {
     path: string;
     poster: string;
   }>;
+}
+
+function VideoPlayer({ path, poster }: { path: string; poster: string }) {
+  const [isReady, setIsReady] = useState(false);
+
+  return (
+    <div className="relative aspect-video w-full bg-black">
+      <img
+        src={poster}
+        alt=""
+        className="absolute inset-0 h-full w-full object-contain"
+        aria-hidden="true"
+      />
+      <video
+        src={path}
+        poster={poster}
+        controls
+        preload="metadata"
+        onCanPlay={() => setIsReady(true)}
+        className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-200 ${isReady ? 'opacity-100' : 'opacity-0'}`}
+        controlsList="nodownload"
+      />
+    </div>
+  );
 }
 
 export default function VideoShowcase() {
@@ -191,14 +216,7 @@ export default function VideoShowcase() {
                     <div key={idx} className="flex flex-col">
                       {/* Video Player */}
                       <div className="rounded-2xl border-2 border-[#E2E2E2] overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                        <video
-                          src={video.path}
-                          poster={video.poster}
-                          controls
-                          preload="metadata"
-                          className="aspect-video w-full bg-black object-contain"
-                          controlsList="nodownload"
-                        />
+                        <VideoPlayer path={video.path} poster={video.poster} />
                       </div>
 
 
