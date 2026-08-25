@@ -12,6 +12,19 @@ import fun4 from '../../Images/videos/FUN4.MP4';
 import top1 from '../../Images/videos/TOP1.MP4';
 import top2 from '../../Images/videos/TOP2.MP4';
 import top3 from '../../Images/videos/TOP3.MP4';
+import adv1Poster from '../../Images/video-posters/ADV1.mp4.png';
+import adv2Poster from '../../Images/video-posters/ADV2.mp4.png';
+import adv3Poster from '../../Images/video-posters/ADV3.mp4.png';
+import brandPoster from '../../Images/video-posters/BRAND.MP4.png';
+import brand2Poster from '../../Images/video-posters/BRAND2.MP4.png';
+import brand3Poster from '../../Images/video-posters/BRAND3.MP4.png';
+import fun1Poster from '../../Images/video-posters/FUN1.MP4.png';
+import fun2Poster from '../../Images/video-posters/FUN2.MP4.png';
+import fun3Poster from '../../Images/video-posters/FUN3.MP4.png';
+import fun4Poster from '../../Images/video-posters/FUN4.MP4.png';
+import top1Poster from '../../Images/video-posters/TOP1.MP4.png';
+import top2Poster from '../../Images/video-posters/TOP2.MP4.png';
+import top3Poster from '../../Images/video-posters/TOP3.MP4.png';
 
 interface VideoCategory {
   id: string;
@@ -22,6 +35,7 @@ interface VideoCategory {
   color: string;
   videos: Array<{
     path: string;
+    poster: string;
   }>;
 }
 
@@ -38,12 +52,15 @@ export default function VideoShowcase() {
       videos: [
         {
           path: adv1,
+          poster: adv1Poster,
         },
         {
           path: adv2,
+          poster: adv2Poster,
         },
         {
           path: adv3,
+          poster: adv3Poster,
         },
       ],
     },
@@ -57,12 +74,15 @@ export default function VideoShowcase() {
       videos: [
         {
           path: brand,
+          poster: brandPoster,
         },
         {
           path: brand2,
+          poster: brand2Poster,
         },
         {
           path: brand3,
+          poster: brand3Poster,
         },
       ],
     },
@@ -76,15 +96,19 @@ export default function VideoShowcase() {
       videos: [
         {
           path: fun1,
+          poster: fun1Poster,
         },
         {
           path: fun2,
+          poster: fun2Poster,
         },
         {
           path: fun3,
+          poster: fun3Poster,
         },
         {
           path: fun4,
+          poster: fun4Poster,
         },
       ],
     },
@@ -98,12 +122,15 @@ export default function VideoShowcase() {
       videos: [
         {
           path: top1,
+          poster: top1Poster,
         },
         {
           path: top2,
+          poster: top2Poster,
         },
         {
           path: top3,
+          poster: top3Poster,
         },
       ],
     },
@@ -166,9 +193,10 @@ export default function VideoShowcase() {
                       <div className="rounded-2xl border-2 border-[#E2E2E2] overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                         <video
                           src={video.path}
+                          poster={video.poster}
                           controls
                           preload="metadata"
-                          className="w-full h-auto bg-black"
+                          className="aspect-video w-full bg-black object-contain"
                           controlsList="nodownload"
                         />
                       </div>
