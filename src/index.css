@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-outfit: 'Outfit', sans-serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #333333;
+    background-color: #FDFBF7;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: var(--font-outfit);
+  }
+
+  .font-editorial {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Bold Typography Theme Styles */
+.text-outline {
+  -webkit-text-stroke: 1.5px #D4818F;
+  color: transparent;
+}
+
+.text-outline-dark {
+  -webkit-text-stroke: 1.5px #333333;
+  color: transparent;
+}
+
+.text-outline-gray {
+  -webkit-text-stroke: 1.5px #E2E2E2;
+  color: transparent;
+}
+
+.pink-accent {
+  color: #D4818F;
+}
+
+.pink-bg {
+  background-color: #FFB7C5;
+}
+
+.gray-bg {
+  background-color: #E2E2E2;
+}
+
+/* Custom subtle noise and glow effects */
+.bg-cream-canvas {
+  background-color: #FDFBF7;
+}
+
+.bg-cream-card {
+  background-color: #FFFFFF;
+}
+
+.bg-pink-soft {
+  background-color: #FFF0F3;
+}
+
+.bg-pink-accent {
+  background-color: #D4818F;
+}
+
+.border-cream-border {
+  border-color: #EFE8DC;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FDFBF7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E2E2E2;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4818F;
+}
+
+/* Keyframe animations for marquee and float */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 35s linear infinite;
+}
+
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1.5deg); }
+}
+
+@keyframes float-delayed {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(-1.5deg); }
+}
+
+.animate-float-slow {
+  animation: float-slow 5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 6s ease-in-out infinite 1.5s;
+}
+
+/* Subtle dot grid pattern */
+.bg-dot-pattern {
+  background-image: radial-gradient(#E8DFD3 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(230, 220, 206, 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(230, 220, 206, 0.4) 1px, transparent 1px);
+}
