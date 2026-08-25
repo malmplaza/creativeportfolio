@@ -44,11 +44,11 @@ function VideoPlayer({ path, poster }: { path: string; poster: string }) {
   const [isReady, setIsReady] = useState(false);
 
   return (
-    <div className="relative aspect-video w-full bg-black">
+    <div className="relative aspect-[9/16] w-full bg-black">
       <img
         src={poster}
         alt=""
-        className="absolute inset-0 h-full w-full object-contain"
+        className="absolute inset-0 h-full w-full object-cover"
         aria-hidden="true"
       />
       <video
@@ -57,7 +57,7 @@ function VideoPlayer({ path, poster }: { path: string; poster: string }) {
         controls
         preload="metadata"
         onCanPlay={() => setIsReady(true)}
-        className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-200 ${isReady ? 'opacity-100' : 'opacity-0'}`}
+        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-200 ${isReady ? 'opacity-100' : 'opacity-0'}`}
         controlsList="nodownload"
       />
     </div>
