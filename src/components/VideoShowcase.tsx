@@ -1,4 +1,17 @@
 import { Film, Zap, TrendingUp, Megaphone } from 'lucide-react';
+import adv1 from '../../Images/videos/ADV1.MOV';
+import adv2 from '../../Images/videos/ADV2.mov';
+import adv3 from '../../Images/videos/ADV3.MOV';
+import brand from '../../Images/videos/BRAND.MP4';
+import brand2 from '../../Images/videos/BRAND2.MP4';
+import brand3 from '../../Images/videos/BRAND3.MP4';
+import fun1 from '../../Images/videos/FUN1.MP4';
+import fun2 from '../../Images/videos/FUN2.MP4';
+import fun3 from '../../Images/videos/FUN3.MP4';
+import fun4 from '../../Images/videos/FUN4.MP4';
+import top1 from '../../Images/videos/TOP1.MP4';
+import top2 from '../../Images/videos/TOP2.MP4';
+import top3 from '../../Images/videos/TOP3.MP4';
 
 interface VideoCategory {
   id: string;
@@ -24,13 +37,13 @@ export default function VideoShowcase() {
       color: '#333333',
       videos: [
         {
-          path: '../../Images/videos/ADV1.MOV',
+          path: adv1,
         },
         {
-          path: '../../Images/videos/ADV2.mov',
+          path: adv2,
         },
         {
-          path: '../../Images/videos/ADV3.MOV',
+          path: adv3,
         },
       ],
     },
@@ -43,13 +56,13 @@ export default function VideoShowcase() {
       color: '#D4818F',
       videos: [
         {
-          path: '../../Images/videos/BRAND.MP4',
+          path: brand,
         },
         {
-          path: '../../Images/videos/BRAND2.MP4',
+          path: brand2,
         },
         {
-          path: '../../Images/videos/BRAND3.MP4',
+          path: brand3,
         },
       ],
     },
@@ -62,16 +75,16 @@ export default function VideoShowcase() {
       color: '#333333',
       videos: [
         {
-          path: '../../Images/videos/FUN1.MP4',
+          path: fun1,
         },
         {
-          path: '../../Images/videos/FUN2.MP4',
+          path: fun2,
         },
         {
-          path: '../../Images/videos/FUN3.MP4',
+          path: fun3,
         },
         {
-          path: '../../Images/videos/FUN4.MP4',
+          path: fun4,
         },
       ],
     },
@@ -84,13 +97,13 @@ export default function VideoShowcase() {
       color: '#D4818F',
       videos: [
         {
-          path: '../../Images/videos/TOP1.MP4',
+          path: top1,
         },
         {
-          path: '../../Images/videos/TOP2.MP4',
+          path: top2,
         },
         {
-          path: '../../Images/videos/TOP3.MP4',
+          path: top3,
         },
       ],
     },
