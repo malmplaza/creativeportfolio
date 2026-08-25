@@ -1,7 +1,7 @@
 import { Film, Zap, TrendingUp, Megaphone } from 'lucide-react';
-import adv1 from '../../Images/videos/ADV1.MOV';
-import adv2 from '../../Images/videos/ADV2.mov';
-import adv3 from '../../Images/videos/ADV3.MOV';
+import adv1 from '../../Images/videos/ADV1.mp4';
+import adv2 from '../../Images/videos/ADV2.mp4';
+import adv3 from '../../Images/videos/ADV3.mp4';
 import brand from '../../Images/videos/BRAND.MP4';
 import brand2 from '../../Images/videos/BRAND2.MP4';
 import brand3 from '../../Images/videos/BRAND3.MP4';
