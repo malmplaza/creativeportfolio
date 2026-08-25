@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type CSSProperties } from 'react';
 import { ArrowRight, Megaphone, Palette, Briefcase } from 'lucide-react';
 import Gallery from './Gallery';
 import sc1 from '../../Images/Social Media Posts/sc1.png';
@@ -88,7 +88,7 @@ export default function GalleryHub() {
                 className="group cursor-pointer"
               >
                 <div className="relative overflow-hidden rounded-lg border-2 border-[#E2E2E2] hover:border-current transition-all duration-300 flex flex-col justify-between bg-[#FDFBF7] hover:bg-white transform hover:scale-105"
-                  style={{ '--hover-color': niche.color } as React.CSSProperties}
+                  style={{ '--hover-color': niche.color } as CSSProperties}
                 >
                   {/* Thumbnail Grid */}
                   <div className="relative grid grid-cols-2 gap-0 bg-gray-100 overflow-hidden">

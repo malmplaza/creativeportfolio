@@ -5,7 +5,7 @@ interface VideoCategory {
   title: string;
   subtitle: string;
   description: string;
-  icon: React.ComponentType<any>;
+  icon: any;
   color: string;
   videos: Array<{
     path: string;
